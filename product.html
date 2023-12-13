@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="product.css" />
+    <title>Product Page</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="product-image">
+        <img src="" alt="Product Image" id="productImage" width="450px" />
+        <div class="thumbnails" id="thumbnails"></div>
+      </div>
+
+      <div class="product-details">
+        <p class="product-vendor" id="productVendor"></p>
+        <h1 class="product-title" id="productTitle"></h1>
+        <hr />
+        <div class="price-info">
+          <div>
+            <p class="price">Price: $<span id="price"></span></p>
+            <p class="compare-price">
+              Compare at Price: $<span id="compare-price"></span>
+            </p>
+            <p class="percentage-off" id="percentageOff"></p>
+          </div>
+        </div>
+        <hr />
+        <div class="color-buttons" id="colorButtons">
+          <p>Choose a Color:</p>
+        </div>
+        <br />
+        <hr />
+        <div class="size-radio-buttons" id="sizeRadioButtons">
+          <p>Choose a Size:</p>
+        </div>
+        <br />
+        <hr />
+
+        <div class="quantity-selector">
+          <button onclick="decrementQuantity()" class="increment">-</button>
+          <input
+            type="number"
+            id="quantity"
+            class="quantity-input"
+            value="1"
+            min="1"
+          />
+          <button onclick="incrementQuantity()" class="increment">+</button>
+          <button id="add-to-cart" onclick="addToCart()" class="increment">
+            <img
+              src="/cartimg.png"
+              alt="Cart"
+              style="width: 20px; height: 20px; margin-right: 5px"
+              class="cartimg"
+            />
+            Add to Cart
+          </button>
+        </div>
+        <p
+          id="add-to-cart-message"
+          class="add-to-cart-message"
+          style="display: none"
+        ></p>
+        <hr />
+        <div class="description" id="productDescription"></div>
+      </div>
+    </div>
+    <script src="product.js"></script>
+  </body>
+</html>
